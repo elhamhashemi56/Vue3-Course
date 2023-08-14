@@ -20,7 +20,32 @@
         <button @click="age--">Decrease</button>
 
         <p @click="changeTitle('sage velgard')">change title</p>
-        
+
+        <hr>
+
+        <!-- Conditional Rendering -->
+        <h4>Conditional Rendering</h4>
+
+        <div v-if="showText">
+            <p>{{title}} - {{author}} - {{age}}</p>
+        </div>
+
+       
+        <button @click="changeShowText">
+            <span v-if="showText">hide text</span>
+            <span v-else>show text</span>
+        </button>
+
+        <p v-show="showText">showing ...</p>
+
+        <!-- unterschied v-if und v-show:
+        v-if: Diese Direktive entfernt das Element vollständig aus dem
+        DOM (Document Object Model), wenn die angegebene Bedingung falsch ist.
+        Wenn die Bedingung wahr ist, wird das Element in den DOM eingefügt.
+
+        v-show: Direktive das Element nicht vom DOM,
+        sondern ändert lediglich seine display-CSS-Eigenschaft  -->
+
     </div>
 
 

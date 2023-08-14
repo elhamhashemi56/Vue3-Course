@@ -6,13 +6,17 @@ const app = Vue.createApp({
       return{
         title:"Boofe koor",
         author:"sadegh hedayat",
-        age:45
+        age:45,
+        showText:true
       }
     },
     methods:{
       changeTitle(abc){
         // console.log("clicked");
         this.title=abc
+      },
+      changeShowText(){
+        this.showText= !this.showText
       }
     }
 
