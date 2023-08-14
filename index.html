@@ -9,6 +9,17 @@
 <body>
     <div id="app">
         <p>{{title}} - {{author}} - {{age}}</p>
+
+        <!-- 
+        <button v-on:click="age++">Increase</button>
+        <button v-on:click="age--">Decrease</button>
+
+        v-on: ist gleich mit @ 
+        -->
+        <button @click="age++">Increase</button>
+        <button @click="age--">Decrease</button>
+
+        <p @click="changeTitle('sage velgard')">change title</p>
         
     </div>
 
