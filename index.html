@@ -3,8 +3,19 @@
 <head>
     
     <title>Vue3 Course</title>
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <script src="https://unpkg.com/vue@next"></script>
+
+    <style>
+        .box{
+            
+            display: inline-block;
+            background-color: #f1f1f1;
+            margin: 5rem;
+            width: 40rem;
+            text-align: center;
+            padding: 100px 0;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -45,6 +56,18 @@
 
         v-show: Direktive das Element nicht vom DOM,
         sondern ändert lediglich seine display-CSS-Eigenschaft  -->
+
+        
+        <!-- Mouse Events -->
+        <br>
+        <hr>
+        <h4>Mouse Events</h4>
+        <br>
+
+        <div class="box" @mouseover="handleEvent">Mouse Over</div>
+        <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
+        <div class="box" @dblclick="handleEvent">Double click</div>
+        <div class="box" @mousemove="handleMouseMove">{{X}},{{Y}}</div>
 
     </div>
 
