@@ -10,7 +10,7 @@
             
             display: inline-block;
             background-color: #f1f1f1;
-            margin: 5rem;
+            margin: 3rem;
             width: 40rem;
             text-align: center;
             padding: 100px 0;
@@ -33,7 +33,7 @@
         <p @click="changeTitle('sage velgard')">change title</p>
 
         <hr>
-
+        <!-- ######################################################## -->
         <!-- Conditional Rendering -->
         <h4>Conditional Rendering</h4>
 
@@ -57,7 +57,7 @@
         v-show: Direktive das Element nicht vom DOM,
         sondern ändert lediglich seine display-CSS-Eigenschaft  -->
 
-        
+        <!-- ######################################################## -->
         <!-- Mouse Events -->
         <br>
         <hr>
@@ -68,6 +68,19 @@
         <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
         <div class="box" @dblclick="handleEvent">Double click</div>
         <div class="box" @mousemove="handleMouseMove">{{X}},{{Y}}</div>
+
+         <!-- ######################################################## -->
+         <!-- Direktive V-for -->
+         <br>
+         <hr>
+        
+            <ul v-for ="item in books" >
+                <li>
+                    <h4>{{item.title}}</h4>
+                    <p>{{item.author}}</p>
+                </li>
+            </ul>
+         
 
     </div>
 
