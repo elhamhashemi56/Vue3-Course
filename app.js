@@ -4,9 +4,10 @@ const app = Vue.createApp({
     // template:"<h2>hello word</h2>"
     data(){
       return{
+        url:"http://www.google.com",
         books:[
-          {title:"book1",author:"author1"},
-          {title:"book2",author:"author2"}
+          {title:"book1",author:"author1",image:"./images/book1.jpg"},
+          {title:"book2",author:"author2",image:"./images/book2.jpg"}
         ],
         X:0,
         Y:0,
