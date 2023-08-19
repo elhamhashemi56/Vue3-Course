@@ -1,0 +1,32 @@
+.box{
+            
+    display: inline-block;
+    background-color: #f1f1f1;
+    margin: 3rem;
+    width: 40rem;
+    text-align: center;
+    padding: 100px 0;
+}
+
+ul{
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    margin: 4rem;
+    padding: unset;
+   
+   
+}
+
+
+li{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border: none !important;
+}
+
+.fav{
+    background-color: brown;
+    color: white;
+    border: none !important;
+}

@@ -4,37 +4,23 @@
     
     <title>Vue3 Course</title>
     <script src="https://unpkg.com/vue@next"></script>
-
-    <style>
-        .box{
-            
-            display: inline-block;
-            background-color: #f1f1f1;
-            margin: 3rem;
-            width: 40rem;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .library{
-            /* display: flex;
-            flex-direction: column; */
-            display: inline-block;
-            border: 1px solid rebeccapurple;
-            margin: 4rem;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="app.css">
+   
 </head>
 <body>
     <div id="app">
+
+        <!-- ########################################################
+        Direktive v-on
+        v-on: ist gleich mit @ -->
+         
         <p>{{title}} - {{author}} - {{age}}</p>
 
         <!-- 
         <button v-on:click="age++">Increase</button>
         <button v-on:click="age--">Decrease</button>
 
-        v-on: ist gleich mit @ 
+        
         -->
         <button @click="age++">Increase</button>
         <button @click="age--">Decrease</button>
@@ -101,16 +87,26 @@
             <a :href="url">google2</a>
             <br>
             
-                <div  v-for="item in books" class="library">
-                    <div> {{item.title}}</div>
-                    <div>  {{item.author}}</div>
-                    <img  :src="item.image" style="width: 10rem; height: 10rem;">
-                </div>
+                <ul  v-for="item in books">
+                    <li>
+                        <img  :src="item.image" style="width: 10rem; height: 10rem;">
+                        <h4> {{item.title}}</h4>
+                        <p>  {{item.author}}</p>
+                    </li>
+                    
+                </ul>
          <!-- ######################################################## -->
-         <!-- Attribute binding -->
+         <!-- Dynamic Classes -->
          <br>
          <hr>
+         <ul  v-for="item in books">
+            <li :class="{fav:item.isFav}">
+                <img  :src="item.image" style="width: 10rem; height: 10rem;">
+                <h4> {{item.title}}</h4>
+                <p>  {{item.author}}</p>
+            </li>
             
+        </ul>
     </div>
 
 

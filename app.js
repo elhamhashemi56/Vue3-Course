@@ -6,8 +6,9 @@ const app = Vue.createApp({
       return{
         url:"http://www.google.com",
         books:[
-          {title:"book1",author:"author1",image:"./images/book1.jpg"},
-          {title:"book2",author:"author2",image:"./images/book2.jpg"}
+          {title:"book1",author:"author1",image:"./images/book1.jpg",isFav:true},
+          {title:"book2",author:"author2",image:"./images/book2.jpg",isFav:false},
+          {title:"book3",author:"author3",image:"./images/book1.jpg",isFav:true},
         ],
         X:0,
         Y:0,
