@@ -23,6 +23,7 @@ li{
     justify-content:space-around;
     align-items: center;
     border: none !important;
+    padding: unset;
 }
 
 .fav{

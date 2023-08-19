@@ -100,13 +100,28 @@
          <br>
          <hr>
          <ul  v-for="item in books">
-            <li :class="{fav:item.isFav}">
+            <li @click="changeFav(item)" :class="{fav:item.isFav}">
                 <img  :src="item.image" style="width: 10rem; height: 10rem;">
                 <h4> {{item.title}}</h4>
                 <p>  {{item.author}}</p>
             </li>
             
         </ul>
+        <!-- #################################################################
+        Computed Properties
+        کامپوتت ها زمانی استفاده میشوند که مقادیر داخل کامپوننت ها تغییر کنند 
+        -->
+        <br>
+        <hr>
+        <ul  v-for="item in filteredBooks">
+            <li @click="changeFav(item)" :class="{fav:item.isFav}">
+                <img  :src="item.image" style="width: 10rem; height: 10rem;">
+                <h4> {{item.title}}</h4>
+                <p>  {{item.author}}</p>
+            </li>
+            
+        </ul>
+
     </div>
 
 

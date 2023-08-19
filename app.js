@@ -4,10 +4,11 @@ const app = Vue.createApp({
     // template:"<h2>hello word</h2>"
     data(){
       return{
+
         url:"http://www.google.com",
         books:[
           {title:"book1",author:"author1",image:"./images/book1.jpg",isFav:true},
-          {title:"book2",author:"author2",image:"./images/book2.jpg",isFav:false},
+          {title:"book2",author:"author2",image:"./images/book2.jpg",isFav:true},
           {title:"book3",author:"author3",image:"./images/book1.jpg",isFav:true},
         ],
         X:0,
@@ -18,6 +19,7 @@ const app = Vue.createApp({
         showText:true
       }
     },
+
     methods:{
       changeTitle(abc){
         // console.log("clicked");
@@ -35,7 +37,16 @@ const app = Vue.createApp({
       handleMouseMove(e){
         this.X=e.offsetX
         this.Y=e.offsetY
+      },
+      changeFav(item){
+        item.isFav= !item.isFav
       }
+    },
+
+    computed:{
+        filteredBooks(){
+          return this.books.filter(item=> item.isFav)
+        }
     }
 
 
